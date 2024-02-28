@@ -33,16 +33,14 @@
 
     <main>
         <section>
-
-
             <div class="max-w-full mx-auto grid grid-cols-1 lg:grid-cols-5 gap-5 px-20 bg-slate-50">
-                <div class="col-span-4">
+                <div id="allCard" class="col-span-4">
                     <!-- start Kitchenware  -->
                     <div>
                         <h2 class="text-4xl font-bold ml-4 pt-20">Kitchenware</h2>
                         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center justify-center">
 
-                            <div class="text-center bg-white py-4 rounded-md">
+                            <div class="text-center bg-white py-4 rounded-md getCard">
                                 <img class="mx-auto bg-slate-200 px-16 py-6" src="Images/Kitchenware/spon.png" alt="">
                                 <div class="py-4">
                                     <div class="rating text-center">
@@ -53,12 +51,12 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-                                    <p class="text-2xl font-bold">K. Accessories</p>
-                                    <span class=" text-slate-500">39.00 TK</span>
+                                    <p class="text-2xl font-bold productName">K. Accessories</p>
+                                    <span class=" text-slate-500 cardPrice">39.00 TK</span>
                                 </div>
                             </div>
 
-                            <div class="text-center bg-white py-3 rounded-md">
+                            <div class="text-center bg-white py-3 rounded-md getCard">
                                 <img class="mx-auto bg-slate-200 px-10 py-6" src="Images/Kitchenware/chopping-boat.png"
                                     alt="">
                                 <div class="py-4">
@@ -70,12 +68,12 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-                                    <p class="text-2xl font-bold">K. Accessories</p>
-                                    <span class=" text-slate-500">29.00 TK</span>
+                                    <p class="text-2xl font-bold productName">K. Accessories</p>
+                                    <span class=" text-slate-500 cardPrice">29.00 TK</span>
                                 </div>
                             </div>
 
-                            <div class="text-center bg-white px-2 py-4 rounded-md">
+                            <div class="text-center bg-white px-2 py-4 rounded-md getCard">
                                 <img class="mx-auto bg-slate-200 px-10 py-6" src="Images/Kitchenware/presurekukar.png"
                                     alt="">
                                 <div class="py-4">
@@ -87,10 +85,13 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-                                    <p class="text-2xl font-bold">Home Cooker</p>
-                                    <span class=" text-slate-500">49.00 TK</span>
+                                    <p class="text-2xl font-bold productName">Home Cooker</p>
+                                    <span class=" text-slate-500 cardPrice">49.00 TK</span>
                                 </div>
                             </div>
+
+
+
                         </div>
                     </div>
 
@@ -99,7 +100,7 @@
                         <h2 class="text-4xl font-bold py-12 ml-4">Sportswear</h2>
                         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center justify-center">
 
-                            <div class="text-center bg-white py-4 rounded-md">
+                            <div class="text-center bg-white py-4 rounded-md getCard">
                                 <img class="mx-auto bg-slate-200 px-10 py-6" src="Images/Sportswear/cap.png" alt="">
                                 <div class="py-4">
                                     <div class="rating text-center">
@@ -110,13 +111,13 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-                                    <p class="text-2xl font-bold">K. Accessories</p>
-                                    <span class=" text-slate-500">39.00 TK</span>
+                                    <p class="text-2xl font-bold productName">K. Accessories</p>
+                                    <span class=" text-slate-500 cardPrice">39.00 TK</span>
                                 </div>
                             </div>
 
 
-                            <div class="text-center bg-white py-4 rounded-md">
+                            <div class="text-center bg-white py-4 rounded-md getCard">
                                 <img class="mx-auto bg-slate-200 px-16 py-4" src="Images/Sportswear/jersey.png" alt="">
                                 <div class="py-4">
                                     <div class="rating text-center">
@@ -127,12 +128,12 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-                                    <p class="text-2xl font-bold">K. Accessories</p>
-                                    <span class=" text-slate-500">29.00 TK</span>
+                                    <p class="text-2xl font-bold productName">K. Accessories</p>
+                                    <span class=" text-slate-500 cardPrice">29.00 TK</span>
                                 </div>
                             </div>
 
-                            <div class="text-center bg-white px-2 py-4 rounded-md">
+                            <div class="text-center bg-white px-2 py-4 rounded-md getCard">
                                 <img class="mx-auto bg-slate-200 px-12 py-4" src="Images/Sportswear/shoes.png" alt="">
                                 <div class="py-4">
                                     <div class="rating text-center">
@@ -143,8 +144,8 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-                                    <p class="text-2xl font-bold">Home Cooker</p>
-                                    <span class=" text-slate-500">49.00 TK</span>
+                                    <p class="text-2xl font-bold productName">Home Cooker</p>
+                                    <span class=" text-slate-500 cardPrice">49.00 TK</span>
                                 </div>
                             </div>
                         </div>
@@ -155,7 +156,7 @@
                         <h2 class="text-4xl font-bold py-12 ml-4">Furniture</h2>
                         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center justify-center">
 
-                            <div class="text-center bg-white py-3 rounded-md">
+                            <div class="text-center bg-white py-3 rounded-md getCard">
                                 <img class="mx-auto bg-slate-200 px-12 py-4" src="Images/Furniture/singel-sofa.png"
                                     alt="">
                                 <div class="py-4">
@@ -167,12 +168,12 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-                                    <p class="text-2xl font-bold">K. Accessories</p>
-                                    <span class=" text-slate-500">39.00 TK</span>
+                                    <p class="text-2xl font-bold productName">K. Accessories</p>
+                                    <span class=" text-slate-500 cardPrice">39.00 TK</span>
                                 </div>
                             </div>
 
-                            <div class="text-center bg-white py-4 rounded-md">
+                            <div class="text-center bg-white py-4 rounded-md getCard">
                                 <img class="mx-auto bg-slate-200 px-16 py-4" src="Images/Furniture/chair.png" alt="">
                                 <div class="py-4">
                                     <div class="rating text-center">
@@ -183,12 +184,12 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-                                    <p class="text-2xl font-bold">K. Accessories</p>
-                                    <span class=" text-slate-500">29.00 TK</span>
+                                    <p class="text-2xl font-bold productName">K. Accessories</p>
+                                    <span class=" text-slate-500 cardPrice">29.00 TK</span>
                                 </div>
                             </div>
 
-                            <div class="text-center bg-white py-4 rounded-md">
+                            <div class="text-center bg-white py-4 rounded-md getCard">
                                 <img class="mx-auto bg-slate-200 px-10 py-4" src="Images/Furniture/sofa.png" alt="">
                                 <div class="py-4">
                                     <div class="rating text-center">
@@ -199,8 +200,8 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-                                    <p class="text-2xl font-bold">Home Cooker</p>
-                                    <span class=" text-slate-500">49.00 TK</span>
+                                    <p class="text-2xl font-bold productName">Home Cooker</p>
+                                    <span class=" text-slate-500 cardPrice">49.00 TK</span>
                                 </div>
                             </div>
                         </div>
@@ -217,9 +218,9 @@
                             </div>
                         </div>
                         <div class="my-8 p-4 bg-white rounded-md">
-                            <p class="text-xl font-bold py-2">Total Price:</p>
-                            <p class="text-xl font-bold py-2">Discount:</p>
-                            <p class="text-xl font-bold pb-2">Total:</p>
+                            <p class="text-xl font-bold py-2 totalPrice">Total Price:</p>
+                            <p class="text-xl font-bold py-2 discount">Discount:</p>
+                            <p class="text-xl font-bold pb-2 total">Total:</p>
                             <button class="btn btn-wide bg-[#F11A7B]  text-white">Make Purchase</button>
                         </div>
                     </div>
@@ -227,7 +228,7 @@
             </div>
         </section>
     </main>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
