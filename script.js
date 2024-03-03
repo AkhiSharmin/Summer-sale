@@ -48,42 +48,34 @@
 
 
 
-// const cards = document.querySelectorAll('.getCard');
-// let totalPrice = 0;
-
-// const totalPriceElement = document.querySelector('.totalPrice');
-// const totalDiscountElement = document.querySelector('.discount');
-// const totalElement = document.querySelector('.total');
-
-
-
-// cards.forEach((value) => {
 //     value.addEventListener('click', function () {
 //         const cardPrice = value.querySelector('.cardPrice').innerText;
 //         const price = parseFloat(cardPrice);
 //         const productName = value.querySelector('.productName').innerText;
-//         const ulCollection = document.querySelector('.ulCollection');
 
-//         // Calculate total price
-//         totalPrice += price;
+//         // Check if the product name already exists in the list
+//         if (!products.includes(productName)) {
+//             products.push(productName);
 
-//         // Calculate discount
-//         const discount = (totalPrice * 5) / 100;
-//         const discountedTotal = totalPrice - discount;
+//             // Calculate total price
+//             totalPrice += price;
 
-//         // Display product title
-//         const li = document.createElement('li');
-//         li.textContent = productName;
-//         ulCollection.appendChild(li);
+//             // Calculate discount
+//             const discount = (totalPrice * 5) / 100;
+//             const discountedTotal = totalPrice - discount;
 
-//         // Update total price, discount, and total elements
-//         totalPriceElement.textContent = "Total Price:  $" + totalPrice.toFixed(2);
-//         totalDiscountElement.textContent = "Discount:  $" + discount.toFixed(2);
-//         totalElement.textContent = "Total:  $" + discountedTotal.toFixed(2);
+//             // Display product title
+//             const li = document.createElement('li');
+//             li.textContent = productName;
+//             ulCollection.appendChild(li);
+
+//             //total price, discount, and total elements
+//             totalPriceElement.textContent = "Total Price:  $" + totalPrice.toFixed(2);
+//             totalDiscountElement.textContent = "Discount:  $" + discount.toFixed(2);
+//             totalElement.textContent = "Total:  $" + discountedTotal.toFixed(2);
+//         }
 //     });
-
 // });
-
 const cards = document.querySelectorAll('.getCard');
 let totalPrice = 0;
 let products = [];
@@ -93,13 +85,14 @@ const totalDiscountElement = document.querySelector('.discount');
 const totalElement = document.querySelector('.total');
 const ulCollection = document.querySelector('.ulCollection');
 
+
 cards.forEach((value) => {
     value.addEventListener('click', function () {
         const cardPrice = value.querySelector('.cardPrice').innerText;
         const price = parseFloat(cardPrice);
         const productName = value.querySelector('.productName').innerText;
 
-        // Check if the product name already exists in the list
+        // Check already exists in the list
         if (!products.includes(productName)) {
             products.push(productName);
 
@@ -110,9 +103,12 @@ cards.forEach((value) => {
             const discount = (totalPrice * 5) / 100;
             const discountedTotal = totalPrice - discount;
 
-            // Display product title
+            // Display product title with numbering
             const li = document.createElement('li');
-            li.textContent = productName;
+            li.textContent = `${products.length}. ${productName}`;
+            li.style.fontWeight = 'bold'
+            ulCollection.style.borderBottom = '2px solid gray'
+            ulCollection.style.padding = '20px 5px'
             ulCollection.appendChild(li);
 
             // Update total price, discount, and total elements

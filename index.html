@@ -146,7 +146,7 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-                                    <p class="text-2xl font-bold productName">Home Cooker</p>
+                                    <p class="text-2xl font-bold productName">Home Cookerr</p>
                                     <span class=" text-slate-500 cardPrice">49.00 TK</span>
                                 </div>
                             </div>
@@ -202,7 +202,7 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     </div>
-                                    <p class="text-2xl font-bold productName">Home Cooker</p>
+                                    <p class="text-2xl font-bold productName">Home Cookers</p>
                                     <span class=" text-slate-500 cardPrice">49.00 TK</span>
                                 </div>
                             </div>
@@ -221,10 +221,29 @@
                         </div>
                         <div class="my-8 p-4 bg-white rounded-md">
                             <ul class="ulCollection"></ul>
-                            <p class="text-xl font-bold py-2 totalPrice">Total Price:</p>
+                            <p class="text-xl font-bold totalPrice">Total Price:</p>
                             <p class="text-xl font-bold py-2 discount">Discount:</p>
                             <p class="text-xl font-bold pb-2 total">Total:</p>
-                            <button class="btn btn-wide bg-[#F11A7B]  text-white">Make Purchase</button>
+                            <!-- <button class="btn btn-wide bg-[#F11A7B]  text-white">Make Purchase</button> -->
+                            <!-- Open the modal using ID.showModal() method -->
+                            <button class="btn btn-wide bg-[#F11A7B]  text-white" onclick="my_modal_1.showModal()">Make
+                                Purchase</button>
+                            <dialog id="my_modal_1" class="modal">
+                                <div class="modal-box text-center">
+                                    <p class="py-4"><img class="mx-auto" src="Images/Group 116669.png" alt=""></p>
+                                    <h3 class="font-bold text-2xl text-center">Congratulations!</h3>
+                                    <p class="font-bold text-slate-400 text-center">Your Purchase the product</p>
+                                    <button class="btn join-item rounded-md bg-[#F11A7B] text-white font-bold"><a
+                                            href="index.html">Go to
+                                            Home</a></button>
+                                    <div class="modal-action">
+                                        <form method="dialog">
+                                            <!-- if there is a button in form, it will close the modal -->
+                                            <button class="btn">Close</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </dialog>
                         </div>
                     </div>
                 </div>
