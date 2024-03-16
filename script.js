@@ -28,25 +28,6 @@
 // })
 
 
-// const cards = document.querySelectorAll('.getCard');
-// let totalPrice = 0;
-// const totalPriceElement = document.querySelector('.totalPrice');
-// const totalDiscount = document.querySelector('.discount');
-// const total = document.querySelector('.total');
-
-// cards.forEach((value) => {
-//     value.addEventListener('click', function () {
-//         // const productTitle = value.querySelector('.productName').innerText;
-//         const cardPrice = document.querySelector('.cardPrice').innerText;
-//         const price = parseFloat(cardPrice)
-
-
-//         totalPrice += price;
-//         totalPriceElement.textContent = "Total Price:  $" + totalPrice.toFixed(2);
-//     });
-// });
-
-
 
 //     value.addEventListener('click', function () {
 //         const cardPrice = value.querySelector('.cardPrice').innerText;
@@ -70,21 +51,25 @@
 //             ulCollection.appendChild(li);
 
 //             //total price, discount, and total elements
-//             totalPriceElement.textContent = "Total Price:  $" + totalPrice.toFixed(2);
-//             totalDiscountElement.textContent = "Discount:  $" + discount.toFixed(2);
-//             totalElement.textContent = "Total:  $" + discountedTotal.toFixed(2);
+//             totalPrices.textContent = "Total Price:  $" + totalPrice.toFixed(2);
+//             totalDiscounts.textContent = "Discount:  $" + discount.toFixed(2);
+//             allTotal.textContent = "Total:  $" + discountedTotal.toFixed(2);
 //         }
 //     });
 // });
+
+
+
+
+
+
 const cards = document.querySelectorAll('.getCard');
 let totalPrice = 0;
 let products = [];
-
-const totalPriceElement = document.querySelector('.totalPrice');
-const totalDiscountElement = document.querySelector('.discount');
-const totalElement = document.querySelector('.total');
+const totalPrices = document.querySelector('.totalPrice');
+const totalDiscounts = document.querySelector('.discount');
+const allTotal = document.querySelector('.total');
 const ulCollection = document.querySelector('.ulCollection');
-
 
 cards.forEach((value) => {
     value.addEventListener('click', function () {
@@ -92,29 +77,38 @@ cards.forEach((value) => {
         const price = parseFloat(cardPrice);
         const productName = value.querySelector('.productName').innerText;
 
-        // Check already exists in the list
         if (!products.includes(productName)) {
             products.push(productName);
-
-            // Calculate total price
             totalPrice += price;
 
-            // Calculate discount
-            const discount = (totalPrice * 5) / 100;
-            const discountedTotal = totalPrice - discount;
-
-            // Display product title with numbering
             const li = document.createElement('li');
             li.textContent = `${products.length}. ${productName}`;
-            li.style.fontWeight = 'bold'
-            ulCollection.style.borderBottom = '2px solid gray'
-            ulCollection.style.padding = '20px 5px'
+            li.style.fontWeight = 'bold';
+            ulCollection.style.borderBottom = '2px solid gray';
+            ulCollection.style.padding = '20px';
             ulCollection.appendChild(li);
 
-            // Update total price, discount, and total elements
-            totalPriceElement.textContent = "Total Price:  $" + totalPrice.toFixed(2);
-            totalDiscountElement.textContent = "Discount:  $" + discount.toFixed(2);
-            totalElement.textContent = "Total:  $" + discountedTotal.toFixed(2);
+            totalPrices.textContent = "Total Price:  $" + totalPrice.toFixed(2);
         }
     });
+});
+
+const discountApplyBtn = document.getElementById('apply-btn');
+discountApplyBtn.addEventListener('click', function () {
+    const discountInp = document.querySelector('.discount-input');
+    if (totalPrice >= 200) {
+        const couponCode = discountInp.value.toUpperCase();
+        if (couponCode === 'SELL200') {
+            const discount = (totalPrice * 5) / 100;
+            const discountedTotal = totalPrice - discount;
+            allTotal.textContent = "Total:  $" + discountedTotal.toFixed(2);
+            totalDiscounts.textContent = "Discount:  $" + discount.toFixed(2);
+        } else {
+            alert("Invalid coupon code. Please enter 'SELL200' for the discount.");
+            discountInp.value = "";
+        }
+    } else {
+        alert("Invest $200 at least to get discount!");
+        discountInp.value = "";
+    }
 });
